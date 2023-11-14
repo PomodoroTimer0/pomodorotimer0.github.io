@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Neue Schriftart hinzugefügt */
     margin: 0;
     padding: 0;
     background-color: #f0e6fd; /* Hintergrundfarbe der Website */
@@ -36,6 +36,29 @@ body {
     font-size: 2em;
     margin-top: 10px;
     color: #fff;
+}
+
+/* Verbesserte Stile für Input-Boxen */
+.manual-timer label,
+.entry-inputs label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.manual-timer input,
+.entry-inputs input,
+.manual-timer button,
+.entry-inputs button {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.manual-timer input {
+    width: 60px;
 }
 
 .middle-section {
