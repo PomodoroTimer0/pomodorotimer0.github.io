@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-section">
+        <h1>Pomodoro Timer</h1>
+
+        <div class="timer-controls">
+            <input type="radio" id="challengeTimer" name="timerType" onchange="switchTimer()" checked>
+            <label for="challengeTimer">Challange Timer</label>
+
+            <div class="manual-timer">
+                <label for="manualTimer">Manueller Timer:</label>
+                <input type="text" id="manualTimer" placeholder="Minuten">
+                <button onclick="setTimer()">Set</button>
+                <button id="startTimerBtn" onclick="startTimer()" disabled>Start</button>
+                <button id="pauseTimerBtn" onclick="pauseTimer()" disabled>Pause</button>
+            </div>
+
+            <div id="timerDisplay">25:00</div>
+        </div>
+    </div>
+
+    <div class="middle-section">
+        <div class="calendar-section">
+            <h2 id="dateDisplay"></h2>
+            <div class="entry-inputs">
+                <label for="startHour">Startzeit:</label>
+                <input type="time" id="startHour">
+
+                <label for="endHour">Endzeit:</label>
+                <input type="time" id="endHour">
+
+                <input type="text" id="task" placeholder="Aufgabe">
+                <button onclick="addEntry()">Eintrag hinzufügen</button>
+            </div>
+            <div id="hourlyEntries" class="hourly-entries"></div>
+        </div>
+
+        <button onclick="deleteEntries()">Alle Einträge löschen</button>
+    </div>
+
+    <div class="right-section">
+        <!-- Hier können weitere rechte Abschnitt-Elemente hinzugefügt werden -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

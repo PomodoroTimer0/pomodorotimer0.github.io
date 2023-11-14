@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6fd; /* Hintergrundfarbe der Website */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.left-section, .middle-section, .right-section {
+    background-color: #f8bbd0; /* Pink */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    text-align: center;
+    color: #fff;
+}
+
+.timer-controls {
+    margin-top: 20px;
+}
+
+.manual-timer {
+    margin-top: 10px;
+}
+
+#timerDisplay {
+    font-size: 2em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.middle-section {
+    width: 40%;
+}
+
+.entry-inputs {
+    margin-top: 20px;
+}
+
+#hourlyEntries {
+    margin-top: 20px;
+}
+
+.hourly-entry {
+    margin-bottom: 10px;
+    background-color: #352d4b; /* Dunkles Lila */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.abgeschlossen {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.right-section {
+    text-align: center;
+    color: #fff;
+}
+
+#dateDisplay {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+button {
+    background-color: #9c27b0; /* Dunkles Lila */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
