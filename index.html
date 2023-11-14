@@ -8,23 +8,31 @@
 </head>
 <body>
 
-        <h1 style="text-align:center">Pomodoro Timer</h1>
 <div class="container">
     <div class="left-section">
+        <h1>Pomodoro Timer</h1>
 
         <div class="timer-controls">
-            <input type="radio" id="challengeTimer" name="timerType" onchange="switchTimer()" checked>
-            <label for="challengeTimer">Challange Timer</label>
+            <div class="timer-section">
+                <label for="challengeTimer">Challange Timer</label>
 
-            <div class="manual-timer">
+                <div class="manual-timer">
+                    <label for="manualTimer">Manueller Timer:</label>
+                    <input type="text" id="manualTimer" placeholder="Minuten">
+                    <button onclick="setTimer()">Set</button>
+                    <button id="startTimerBtn" onclick="startTimer()" disabled>Start</button>
+                    <button id="pauseTimerBtn" onclick="pauseTimer()" disabled>Pause</button>
+                </div>
 
-                <input type="text" id="manualTimer" placeholder="Minuten">
-                <button onclick="setTimer()">Set</button>
-                <button id="startTimerBtn" onclick="startTimer()" disabled>Start</button>
-                <button id="pauseTimerBtn" onclick="pauseTimer()" disabled>Pause</button>
+                <div id="timerDisplay">25:00</div>
             </div>
 
-            <div id="timerDisplay">25:00</div>
+            <div class="timer-section">
+                <label for="restTimer">Ausruh-Timer</label>
+                <div id="restTimerDisplay">05:00</div>
+                <button id="startRestTimerBtn" onclick="startRestTimer()" disabled class="start-btn">Start</button>
+                <button id="pauseRestTimerBtn" onclick="pauseRestTimer()" disabled class="pause-btn">Pause</button>
+            </div>
         </div>
     </div>
 
@@ -36,7 +44,7 @@
                 <input type="time" id="startHour">
 
                 <label for="endHour">Endzeit:</label>
-                <input type="time" id="endHour"> 
+                <input type="time" id="endHour">
 
                 <input type="text" id="task" placeholder="Aufgabe">
                 <button onclick="addEntry()">Eintrag hinzufügen</button>
@@ -44,12 +52,15 @@
             <div id="hourlyEntries" class="hourly-entries"></div>
         </div>
 
-        <button onclick="deleteEntries()">Alle Einträge löschen</button>
+        <button id="deleteEntriesBtn" onclick="deleteEntries()">Alle Einträge löschen</button>
     </div>
 
     <div class="right-section">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/SbHhaVmdEvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="audio-player">
+            <h2>Audio Player</h2>
+            <iframe width="550px" height="315" src="https://www.youtube.com/embed/SbHhaVmdEvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+        </div>
     </div>
 </div>
 
