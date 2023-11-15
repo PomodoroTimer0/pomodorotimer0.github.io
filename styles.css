@@ -157,3 +157,24 @@ button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
+
+.youtube-player {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#youtubeSelect {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #9c27b0; /* Dunkles Lila */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #9c27b0; /* Dunkles Lila */
+    cursor: pointer;
+}
+
+#youtubePlayer {
+    margin-top: 10px;
+    border: 1px solid #9c27b0; /* Dunkles Lila */
+    border-radius: 5px;
+}
