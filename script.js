@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Lade und zeige Einträge aus dem lokalen Speicher
     loadAndDisplayEntries();
+
+    const initialVideoUrl = document.getElementById('youtubeSelect').value;
+    changeVideo(initialVideoUrl);
 });
 
 let timerInterval;
