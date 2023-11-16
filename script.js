@@ -134,7 +134,7 @@ function pauseTimer() {
 function playTimerSound() {
     const timerSound = document.getElementById('timerSound');
     timerSound.play();
- alert("der Timer ist abgelaufen!");
+    alert("Timer ist abgelaufen!")
 }
 
 function updateStartButtonStatus() {
