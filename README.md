@@ -1,2 +1,6 @@
 # PrododoroTimer
-## ein PrododoroTimer zum Lernen mit einer Todo Liste und einen Youtube Player
+## ein PrododoroTimer zum Lernen 
+-Todo Liste 
+-Youtube Player
+-Challange Timer
+-Alert beim Timerende
