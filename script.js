@@ -249,5 +249,5 @@ function deleteEntries() {
 }
 function changeVideo(videoUrl) {
     const youtubePlayer = document.getElementById('youtubePlayer');
-    youtubePlayer.src = videoUrl;
+    youtubePlayer.src = 'data:text/html;charset=utf-8,' + encodeURIComponent('<iframe width="560" height="315" src="' + videoUrl + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
 }
