@@ -8,15 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Lade und zeige Einträge aus dem lokalen Speicher
     loadAndDisplayEntries();
 
+    // Lade direkt das YT video beim Laden der Seite
     const initialVideoUrl = document.getElementById('youtubeSelect').value;
     changeVideo(initialVideoUrl);
 });
 
 let timerInterval;
 let timerValue;
-let aktiverTimerTyp = 'challengeTimer'; // Standard: Challenge Timer
-let remainingTime = 0; // Hinzugefügte Variable für die verbleibende Zeit
-let isTimerRunning = false; // Variable zum Verfolgen des Timer-Status
+let aktiverTimerTyp = 'challengeTimer'; 
+let remainingTime = 0; 
+let isTimerRunning = false; 
 
 function switchTimer() {
     const challengeTimer = document.getElementById('challengeTimer');
@@ -38,7 +39,6 @@ function setTimer() {
     if (manualTimer > 0) {
         timerValue = manualTimer;
 
-        // Zeige den eingestellten Timer-Wert an
         document.getElementById('timerDisplay').innerText = `${manualTimer}:00`;
 
         // Speichere den Timer-Status im lokalen Speicher
@@ -171,7 +171,6 @@ function loadAndDisplayEntries() {
 }
 
 function loadEntries() {
-    // Lade Einträge aus dem lokalen Speicher
     return JSON.parse(localStorage.getItem('hourlyEntries')) || [];
 }
 
@@ -219,7 +218,6 @@ function addEntry() {
     if (startHour && endHour && task) {
         const eintrag = { startHour, endHour, task };
 
-        // Lade vorhandene Einträge
         const einträge = loadEntries();
 
         // Füge den neuen Eintrag hinzu
