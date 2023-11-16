@@ -5,6 +5,10 @@ body {
     background-color: #f0e6fd; /* Hintergrundfarbe der Website */
 }
 
+h1{
+    text-align: center;
+    color: white;
+}
 .container {
     display: flex;
     justify-content: space-around;
