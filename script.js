@@ -255,8 +255,11 @@ function deleteEntries() {
     // Aktualisiere die Anzeige
     loadAndDisplayEntries();
 }
-function changeVideo(videoUrl) {
+function changeVideo() {
+    const selectElement = document.getElementById('youtubeSelect');
+    const videoUrl = selectElement.value;
+
     const youtubePlayer = document.getElementById('youtubePlayer');
-    youtubePlayer.src = 'data:text/html;charset=utf-8,' + encodeURIComponent('<iframe width="560" height="315" src="' + videoUrl + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+    youtubePlayer.src = videoUrl;
 }
 
