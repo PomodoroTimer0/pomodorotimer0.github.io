@@ -244,4 +244,7 @@ function deleteEntries() {
     // Aktualisiere die Anzeige
     loadAndDisplayEntries();
 }
-
+function changeVideo(videoUrl) {
+    const youtubePlayer = document.getElementById('youtubePlayer');
+    youtubePlayer.src = videoUrl;
+}

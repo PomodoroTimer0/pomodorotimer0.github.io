@@ -22,7 +22,7 @@
                 <label for="challengeTimer">Challange Timer</label>
 
                 <div class="manual-timer">
-                    <label for="manualTimer">Manueller Timer:</label>
+                    <label for="manualTimer">Timer (Min):</label>
                     <input type="text" id="manualTimer" placeholder="Minuten">
                     <button onclick="setTimer()">Set</button>
                     <button id="startTimerBtn" onclick="startTimer()" disabled>Start</button>
@@ -58,12 +58,22 @@
     </div>
 
     <div class="right-section">
-        <div class="youtube-player">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sxC3Fg98AKE?si=ODwtBfAXM-Ye7BQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SbHhaVmdEvc?si=JDZeiOJ6YFfHg0Gi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </div>
+<div class="youtube-player">
+    <label for="youtubeSelect">Youtube Player</label> <br>
+    <select id="youtubeSelect" onchange="changeVideo(this.value)">
+        <option value="https://www.youtube.com/embed/sxC3Fg98AKE?si=ODwtBfAXM-Ye7BQi">music to make your brain shut up</option>
+        <option value="https://www.youtube.com/embed/MVeeRCRw5kM?si=UA80-oHsOlJjK-kp">what it feels like to be a memory</option>
+        <option value="https://www.youtube.com/embed/dAke238VozI?si=Dv2ODNeb3ALupfy_">what it feels like waking up to rain at 3 am</option>
+        <option value="https://www.youtube.com/embed/SbHhaVmdEvc?si=JDZeiOJ6YFfHg0Gi">Beautiful Relaxing Anime Music</option>
+        <option value="https://www.youtube.com/embed/6H-PLF2CR18?si=b7MRsNYiMOmiw6tf">Lofi Deep Focus</option>
+        <option value="https://www.youtube.com/embed/2h1BJCxtNes?si=Aw5qubSnjKR0ISy8"> ඞ </option>
+
+    </select>
+
+    <br>
+
+    <iframe id="youtubePlayer" width="560" height="315" src="https://www.youtube.com/embed/sxC3Fg98AKE?si=ODwtBfAXM-Ye7BQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 </div>
 
 <script src="script.js"></script>
