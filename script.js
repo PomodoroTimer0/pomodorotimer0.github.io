@@ -51,7 +51,6 @@ function setTimer() {
     }
 }
 
-
 function saveTimerStatus(timerValue) {
     localStorage.setItem('timerStatus', timerValue);
 }
@@ -99,6 +98,9 @@ function startTimer() {
 
                 // Ändere den Text des Buttons auf "Start" nach Abschluss des Timers
                 updateStartButtonStatus();
+
+                // Spiele den Sound ab
+                playTimerSound();
             }
         }, 1000);
 
@@ -127,6 +129,12 @@ function pauseTimer() {
 
     // Ändere den Text des Buttons auf "Start" während der Timer pausiert ist
     updateStartButtonStatus();
+}
+
+function playTimerSound() {
+    const timerSound = document.getElementById('timerSound');
+    timerSound.play();
+ alert("der Timer ist abgelaufen!");
 }
 
 function updateStartButtonStatus() {
@@ -214,7 +222,7 @@ function addEntry() {
         // Lade vorhandene Einträge
         const einträge = loadEntries();
 
-                // Füge den neuen Eintrag hinzu
+        // Füge den neuen Eintrag hinzu
         einträge.push(eintrag);
 
         // Speichere Einträge im lokalen Speicher
@@ -246,8 +254,4 @@ function deleteEntries() {
 
     // Aktualisiere die Anzeige
     loadAndDisplayEntries();
-}
-function changeVideo(videoUrl) {
-    const youtubePlayer = document.getElementById('youtubePlayer');
-    youtubePlayer.innerHTML = '<iframe width="560" height="315" src="' + videoUrl + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
 }
