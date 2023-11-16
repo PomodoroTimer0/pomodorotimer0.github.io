@@ -16,17 +16,17 @@ h1{
 }
 
 .left-section, .middle-section, .right-section {
-    background-color: #f8bbd0; /* Pink */
-    border-radius: 12px; /* Erhöhe den Radius für abgerundete Ecken */
+    background-color: #f8bbd0; 
+    border-radius: 12px; 
     padding: 20px;
-    margin: 20px; /* Erhöhe den Außenabstand */
+    margin: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .left-section {
     text-align: center;
     color: #fff;
-    width: 25%; /* Du kannst die Breite nach Bedarf anpassen */
+    width: 25%; 
     padding: 20px;
     margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -42,27 +42,27 @@ h1{
 }
 
 #timerDisplay {
-    font-size: 2.5em; /* Erhöhe die Schriftgröße für den Timer */
-    margin-top: 15px; /* Erhöhe den oberen Abstand */
+    font-size: 2.5em;
+    margin-top: 15px; 
     color: #fff;
 }
 
 .manual-timer input[type="text"],
 .manual-timer button {
-    padding: 10px; /* Erhöhe das Padding für Textfelder und Buttons */
-    margin: 5px; /* Verringere den äußeren Abstand der Textfelder und Buttons */
-    border: 1px solid #9c27b0; /* Hinzufügen eines dünnen Rahmens */
-    border-radius: 5px; /* Abgerundete Ecken für Textfelder und Buttons */
-    box-sizing: border-box; /* Berücksichtige den Rand im Gesamtlayout */
-    width: 80px; /* Festlegen einer festen Breite für das Textfeld und die Buttons */
+    padding: 10px; 
+    margin: 5px; 
+    border: 1px solid #9c27b0; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    width: 80px; 
 }
 
 .manual-timer input[type="text"] {
-    width: 120px; /* Erhöhe die Breite des Textfelds für den Timer-Wert */
+    width: 120px; 
 }
 
 .manual-timer button {
-    background-color: #9c27b0; /* Dunkles Lila */
+    background-color: #9c27b0; 
     color: white;
     cursor: pointer;
 }
@@ -73,29 +73,29 @@ h1{
 }
 
 .middle-section {
-    width: 45%; /* Erhöhe die Breite der mittleren Sektion */
+    width: 45%; /* Breite der mittleren Sektion */
 }
 
 .entry-inputs input[type="time"],
 .entry-inputs input[type="text"],
 .entry-inputs button {
-    padding: 10px; /* Erhöhe das Padding für Textfelder und Buttons */
-    margin: 5px; /* Verringere den äußeren Abstand der Textfelder und Buttons */
-    border: 1px solid #9c27b0; /* Hinzufügen eines dünnen Rahmens */
-    border-radius: 5px; /* Abgerundete Ecken für Textfelder und Buttons */
-    box-sizing: border-box; /* Berücksichtige den Rand im Gesamtlayout */
+    padding: 10px; 
+    margin: 5px; 
+    border: 1px solid #9c27b0; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
 }
 
 .entry-inputs input[type="time"],
 .entry-inputs input[type="text"] {
-    width: 100%; /* Fülle den verfügbaren Platz in den Textfeldern aus */
+    width: 100%; 
 }
 
 .entry-inputs button {
-    background-color: #9c27b0; /* Dunkles Lila */
+    background-color: #9c27b0;
     color: white;
     cursor: pointer;
-    width: 120px; /* Festlegen einer festen Breite für die Buttons */
+    width: 120px;
 }
 
 #hourlyEntries {
@@ -103,11 +103,11 @@ h1{
 }
 
 .hourly-entry {
-    margin-bottom: 15px; /* Erhöhe den unteren Abstand zwischen den Einträgen */
-    background-color: #352d4b; /* Dunkles Lila */
+    margin-bottom: 15px; 
+    background-color: #352d4b; 
     color: #fff;
-    padding: 15px; /* Erhöhe das Padding für die Einträge */
-    border-radius: 8px; /* Erhöhe den Radius für abgerundete Ecken */
+    padding: 15px; 
+    border-radius: 8px; 
 }
 
 .abgeschlossen {
@@ -127,8 +127,8 @@ h1{
 }
 
 #dateDisplay {
-    font-size: 1.5em; /* Erhöhe die Schriftgröße für das Datum */
-    margin-top: 15px; /* Erhöhe den oberen Abstand */
+    font-size: 1.5em; 
+    margin-top: 15px; 
     color: #fff;
 }
 
@@ -139,22 +139,22 @@ h1{
 }
 
 #deleteEntriesBtn {
-    background-color: #e91e63; /* Pink */
+    background-color: #e91e63;
     color: white;
-    padding: 12px; /* Erhöhe das Padding für den Button */
+    padding: 12px; 
     border: none;
-    border-radius: 8px; /* Abgerundete Ecken für den Button */
+    border-radius: 8px; 
     cursor: pointer;
-    width: 200px; /* Festlegen einer festen Breite für den Button */
-    transition: background-color 0.3s ease; /* Hinzufügen einer sanften Farbübergangseffekt */
+    width: 200px; 
+    transition: background-color 0.3s ease; 
 }
 
 #deleteEntriesBtn:hover {
-    background-color: #c2185b; /* Dunkleres Pink im Hover-Zustand */
+    background-color: #c2185b;
 }
 
 #deleteEntriesBtn:active {
-    background-color: #ad1457; /* Noch dunkleres Pink im Aktiv-Zustand */
+    background-color: #ad1457;
 }
 
 button:disabled {
@@ -170,15 +170,15 @@ button:disabled {
 #youtubeSelect {
     padding: 10px;
     font-size: 1em;
-    border: 1px solid #9c27b0; /* Dunkles Lila */
+    border: 1px solid #9c27b0; 
     border-radius: 5px;
     background-color: #fff;
-    color: #9c27b0; /* Dunkles Lila */
+    color: #9c27b0;
     cursor: pointer;
 }
 
 #youtubePlayer {
     margin-top: 10px;
-    border: 1px solid #9c27b0; /* Dunkles Lila */
+    border: 1px solid #9c27b0;
     border-radius: 5px;
 }
