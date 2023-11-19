@@ -263,3 +263,159 @@ function changeVideo() {
 
 
 
+
+
+let flashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
+let quizCards = [];
+
+updateFlashcards();
+
+function addFlashcard() {
+    const question = document.getElementById('question').value;
+    const answer = document.getElementById('answer').value;
+
+    if (question && answer) {
+        const flashcard = { question, answer };
+        flashcards.push(flashcard);
+        clearInputFields();
+        saveFlashcardsToLocalStorage();
+        updateFlashcards(); // Hier aktualisieren, nachdem eine Karte hinzugefügt wurde
+    } else {
+        alert('Bitte Frage und Antwort eingeben.');
+    }
+}
+
+function updateFlashcards() {
+    const flashcardsContainer = document.getElementById('flashcards');
+    flashcardsContainer.innerHTML = '';
+
+    flashcards.forEach((flashcard, index) => {
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('flashcard');
+        cardDiv.innerHTML = `<strong>Frage:</strong> ${flashcard.question}<br><strong>Antwort:</strong> ${flashcard.answer}`;
+        flashcardsContainer.appendChild(cardDiv);
+    });
+
+    // Hinzugefügten Code für den Karteikarten-Löschen-Button
+    const deleteFlashcardsBtn = document.getElementById('deleteFlashcardsBtn');
+    if (flashcards.length > 0) {
+        deleteFlashcardsBtn.style.display = 'block';
+    } else {
+        deleteFlashcardsBtn.style.display = 'none';
+    }
+}
+
+function saveFlashcardsToLocalStorage() {
+    localStorage.setItem('flashcards', JSON.stringify(flashcards));
+}
+
+function showDeleteFlashcardsButton() {
+    const deleteFlashcardsButton = document.getElementById('deleteFlashcardsBtn');
+    deleteFlashcardsButton.style.display = 'block';
+}
+
+function clearInputFields() {
+    document.getElementById('question').value = '';
+    document.getElementById('answer').value = '';
+}
+
+function deleteFlashcards() {
+
+    flashcards = [];
+    saveFlashcardsToLocalStorage();
+    updateFlashcards();
+}
+
+function hideDeleteFlashcardsButton() {
+    const deleteFlashcardsButton = document.getElementById('deleteFlashcardsBtn');
+    deleteFlashcardsButton.style.display = 'none';
+}
+
+function startQuiz() {
+    quizCards = [...flashcards];
+    shuffleArray(quizCards);
+    showQuiz();
+}
+
+function showQuiz() {
+    document.getElementById('quiz').style.display = 'block';
+    checkQuiz(); 
+}
+
+function updateQuizCards() {
+    const quizCardsContainer = document.getElementById('quizCards');
+    quizCardsContainer.innerHTML = ''; // Hier wird der Inhalt vor dem Hinzufügen von neuen Quiz-Fragen gelöscht
+
+    quizCards.forEach((quizCard, index) => {
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('quiz-card');
+        cardDiv.innerHTML = `<strong>Frage ${index + 1}:</strong> ${quizCard.question}`;
+        quizCardsContainer.appendChild(cardDiv);
+    });
+checkQuiz();
+}
+
+function checkQuiz() {
+    const userAnswers = [];
+
+    quizCards.forEach((quizCard, index) => {
+        const userAnswer = prompt(`Frage ${index + 1}: ${quizCard.question}`);
+        userAnswers.push(userAnswer);
+    });
+
+    displayResults(userAnswers);
+}
+
+function displayResults(userAnswers) {
+    let correctCount = 0;
+    const incorrectAnswers = [];
+
+    quizCards.forEach((quizCard, index) => {
+        if (userAnswers[index] === quizCard.answer) {
+            correctCount++;
+        } else {
+            incorrectAnswers.push({
+                question: quizCard.question,
+                userAnswer: userAnswers[index],
+                correctAnswer: quizCard.answer
+            });
+        }
+    });
+
+    const accuracy = (correctCount / quizCards.length) * 100;
+
+    alert(`Ergebnis: Du hast ${correctCount} von ${quizCards.length} Fragen richtig beantwortet. Genauigkeit: ${accuracy.toFixed(2)}%`);
+
+    if (incorrectAnswers.length > 0) {
+        showIncorrectAnswers(incorrectAnswers);
+    }
+}
+
+function showIncorrectAnswers(incorrectAnswers) {
+    const incorrectAnswersContainer = document.getElementById('incorrectAnswers');
+    incorrectAnswersContainer.innerHTML = '';
+
+    incorrectAnswers.forEach((incorrectAnswer, index) => {
+        const answerDiv = document.createElement('div');
+        answerDiv.classList.add('incorrect-answer');
+        answerDiv.innerHTML = `<strong>Frage:</strong> ${incorrectAnswer.question}<br>
+                               <strong>Deine Antwort:</strong> ${incorrectAnswer.userAnswer}<br>
+                               <strong>Richtige Antwort:</strong> ${incorrectAnswer.correctAnswer}`;
+        incorrectAnswersContainer.appendChild(answerDiv);
+    });
+}
+
+// Fisher-Yates Shuffle Algorithmus zum Zufällig Mischen von Arrays
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+
+
+
+
+
+

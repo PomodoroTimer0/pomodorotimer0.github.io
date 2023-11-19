@@ -5,33 +5,35 @@ body {
     background-color: #f0e6fd; /* Hintergrundfarbe der Website */
 }
 
-h1{
+h1 {
     text-align: center;
     color: white;
 }
+
 .container {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
 }
 
-.left-section, .middle-section, .right-section {
-    background-color: #f8bbd0; 
-    border-radius: 12px; 
+.left-section,
+.middle-section,
+.right-section {
+    background-color: #f8bbd0;
+    border-radius: 12px;
     padding: 20px;
-    margin: 20px; 
+    margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .left-section {
     text-align: center;
     color: #fff;
-    width: 25%; 
+    width: 25%;
     padding: 20px;
     margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .timer-controls {
     margin-top: 20px;
@@ -43,26 +45,26 @@ h1{
 
 #timerDisplay {
     font-size: 2.5em;
-    margin-top: 15px; 
+    margin-top: 15px;
     color: #fff;
 }
 
 .manual-timer input[type="text"],
 .manual-timer button {
-    padding: 10px; 
-    margin: 5px; 
-    border: 1px solid #9c27b0; 
-    border-radius: 5px; 
-    box-sizing: border-box; 
-    width: 80px; 
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #9c27b0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 80px;
 }
 
 .manual-timer input[type="text"] {
-    width: 120px; 
+    width: 120px;
 }
 
 .manual-timer button {
-    background-color: #9c27b0; 
+    background-color: #9c27b0;
     color: white;
     cursor: pointer;
 }
@@ -79,16 +81,16 @@ h1{
 .entry-inputs input[type="time"],
 .entry-inputs input[type="text"],
 .entry-inputs button {
-    padding: 10px; 
-    margin: 5px; 
-    border: 1px solid #9c27b0; 
-    border-radius: 5px; 
-    box-sizing: border-box; 
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #9c27b0;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .entry-inputs input[type="time"],
 .entry-inputs input[type="text"] {
-    width: 100%; 
+    width: 100%;
 }
 
 .entry-inputs button {
@@ -103,11 +105,11 @@ h1{
 }
 
 .hourly-entry {
-    margin-bottom: 15px; 
-    background-color: #352d4b; 
+    margin-bottom: 15px;
+    background-color: #352d4b;
     color: #fff;
-    padding: 15px; 
-    border-radius: 8px; 
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .abgeschlossen {
@@ -116,7 +118,6 @@ h1{
 }
 
 .right-section {
-    .right-section {
     text-align: center;
     color: #fff;
     padding: 20px;
@@ -124,11 +125,9 @@ h1{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-}
-
 #dateDisplay {
-    font-size: 1.5em; 
-    margin-top: 15px; 
+    font-size: 1.5em;
+    margin-top: 15px;
     color: #fff;
 }
 
@@ -141,12 +140,12 @@ h1{
 #deleteEntriesBtn {
     background-color: #e91e63;
     color: white;
-    padding: 12px; 
+    padding: 12px;
     border: none;
-    border-radius: 8px; 
+    border-radius: 8px;
     cursor: pointer;
-    width: 200px; 
-    transition: background-color 0.3s ease; 
+    width: 200px;
+    transition: background-color 0.3s ease;
 }
 
 #deleteEntriesBtn:hover {
@@ -170,7 +169,7 @@ button:disabled {
 #youtubeSelect {
     padding: 10px;
     font-size: 1em;
-    border: 1px solid #9c27b0; 
+    border: 1px solid #9c27b0;
     border-radius: 5px;
     background-color: #fff;
     color: #9c27b0;
@@ -181,4 +180,104 @@ button:disabled {
     margin-top: 10px;
     border: 1px solid #9c27b0;
     border-radius: 5px;
+}
+
+/* Styles für Karteikarten */
+.flashcards-section {
+    background-color: #f8bbd0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard-inputs {
+    margin-bottom: 20px;
+}
+
+.flashcard-inputs label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.flashcard-inputs input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #9c27b0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.flashcard-inputs button {
+    background-color: #9c27b0;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px; /* Abstand zwischen den Buttons */
+}
+
+.flashcard-inputs button:hover {
+    background-color: #c2185b;
+}
+
+.flashcards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flashcard {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #352d4b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.quiz-card {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #352d4b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+#quiz {
+    width: 45%;
+    display: none;
+}
+
+#quizCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#incorrectAnswers {
+    width: 45%;
+    display: none;
+}
+
+#incorrectAnswers h2 {
+    color: #c2185b;
+}
+
+/* Neue Styles für den "Karteikarten löschen"-Button */
+.flashcards-section button {
+    margin-top: 10px;
+    background-color: #ff5722;
+}
+
+/* Anpassungen für den "Quiz starten"-Button */
+.flashcard-inputs button:last-child {
+    background-color: #2196f3;
+    margin-right: 0; /* Kein Abstand zum vorherigen Button */
+}
+
+.flashcard-inputs button:last-child:hover {
+    background-color: #0d47a1;
 }

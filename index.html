@@ -13,13 +13,11 @@
 </head>
 <body>
 
-	<h1 style="color: black">Pomodoro Timer</h1>
 <div class="container">
     <div class="left-section">
-
         <div class="timer-controls">
             <div class="timer-section">
-                <h1><label for="challengeTimer">Challange Timer</label> </h1>
+                <h1><label for="challengeTimer">Challange Timer</label></h1>
 
                 <div class="manual-timer">
                     <label for="manualTimer">Timer (Min):</label>
@@ -31,16 +29,12 @@
 
                 <div id="timerDisplay">25:00</div>
             </div>
-
-            <div class="timer-section">
-
-            </div>
         </div>
     </div>
-	<audio id="timerSound" src="alert.mp3"></audio>
+
     <div class="middle-section">
         <div class="calendar-section">
-	<h1> To-Do Liste</h1>
+            <h1> To-Do Liste</h1>
             <h4 id="dateDisplay"></h4>
             <div class="entry-inputs">
                 <label for="startHour">Startzeit:</label>
@@ -59,22 +53,47 @@
     </div>
 
     <div class="right-section">
-<div class="youtube-player">
-   <h1> <label for="youtubeSelect">Youtube Player</label> <br> </h1>
-    <select id="youtubeSelect" onchange="changeVideo()">
-        <option value="https://www.youtube.com/embed/sxC3Fg98AKE?si=ODwtBfAXM-Ye7BQi">music to make your brain shut up</option>
-        <option value="https://www.youtube.com/embed/MVeeRCRw5kM?si=UA80-oHsOlJjK-kp">what it feels like to be a memory</option>
-        <option value="https://www.youtube.com/embed/dAke238VozI?si=Dv2ODNeb3ALupfy_">what it feels like waking up to rain at 3 am</option>
-        <option value="https://www.youtube.com/embed/SbHhaVmdEvc?si=JDZeiOJ6YFfHg0Gi">Beautiful Relaxing Anime Music</option>
-        <option value="https://www.youtube.com/embed/6H-PLF2CR18?si=b7MRsNYiMOmiw6tf">Lofi Deep Focus</option>
-        <option value="https://www.youtube.com/embed/2h1BJCxtNes?si=Aw5qubSnjKR0ISy8"> ඞ </option>
-    </select>
+        <div class="youtube-player">
+            <h1><label for="youtubeSelect">Youtube Player</label><br></h1>
+            <select id="youtubeSelect" onchange="changeVideo()">
+                <option value="https://www.youtube.com/embed/sxC3Fg98AKE?si=ODwtBfAXM-Ye7BQi">music to make your brain shut up</option>
+                <option value="https://www.youtube.com/embed/MVeeRCRw5kM?si=UA80-oHsOlJjK-kp">what it feels like to be a memory</option>
+                <option value="https://www.youtube.com/embed/dAke238VozI?si=Dv2ODNeb3ALupfy_">what it feels like waking up to rain at 3 am</option>
+                <option value="https://www.youtube.com/embed/SbHhaVmdEvc?si=JDZeiOJ6YFfHg0Gi">Beautiful Relaxing Anime Music</option>
+                <option value="https://www.youtube.com/embed/6H-PLF2CR18?si=b7MRsNYiMOmiw6tf">Lofi Deep Focus</option>
+                <option value="https://www.youtube.com/embed/2h1BJCxtNes?si=Aw5qubSnjKR0ISy8"> ඞ </option>
+            </select>
+            <br>
+            <iframe id="youtubePlayer" width="750" height="450" src="https://www.youtube.com/embed/sxC3Fg98AKE?si=ODwtBfAXM-Ye7BQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+<br>
+        <div class="flashcards-section">
+            <h1>Karteikarten Lernen</h1>
+            <div class="flashcard-inputs">
+                <label for="question">Frage:</label>
+                <input type="text" id="question" placeholder="Frage eingeben">
 
-    <br>
+                <label for="answer">Antwort:</label>
+                <input type="text" id="answer" placeholder="Antwort eingeben">
 
-    <iframe id="youtubePlayer" width="750" height="450" src="https://www.youtube.com/embed/sxC3Fg98AKE?si=ODwtBfAXM-Ye7BQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <button onclick="addFlashcard()">Karte hinzufügen</button>
+                <button onclick="startQuiz()">Quiz starten</button>
+                <button id="deleteFlashcardsBtn" onclick="deleteFlashcards()" style="display: none;">Alle Karteikarten löschen</button>
+            </div>
+            <div id="flashcards" class="flashcards"></div>
+            <div id="quiz" style="display: none;">
+ 
+
+            </div>
+            <div id="incorrectAnswers" style="display: none;">
+                <!-- Hier werden die falschen Antworten angezeigt -->
+                <h2>Falsche Antworten</h2>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+
+<audio id="timerSound" src="alert.mp3"></audio>
 
 <script src="script.js"></script>
 </body>
