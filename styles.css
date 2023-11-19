@@ -281,3 +281,108 @@ button:disabled {
 .flashcard-inputs button:last-child:hover {
     background-color: #0d47a1;
 }
+
+/* Füge diese Stile am Ende deiner styles.css-Datei hinzu oder aktualisiere die entsprechenden Bereiche */
+
+.flashcards-section {
+    width: 45%;
+    background-color: #f8bbd0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard-inputs {
+    margin-bottom: 20px;
+}
+
+.flashcard-inputs label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.flashcard-inputs input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #9c27b0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.flashcard-inputs button {
+    background-color: #9c27b0;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.flashcard-inputs button:hover {
+    background-color: #c2185b;
+}
+
+.flashcards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flashcard {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #352d4b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+#quiz {
+    width: 45%;
+    display: none;
+}
+
+#quizCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quiz-card {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #352d4b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+#incorrectAnswers {
+    width: 45%;
+    display: none;
+}
+
+#incorrectAnswers h2 {
+    color: #c2185b;
+}
+
+#deleteFlashcardsBtn {
+    background-color: #e91e63;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+}
+
+#deleteFlashcardsBtn:hover {
+    background-color: #c2185b;
+}
+
+#deleteFlashcardsBtn:active {
+    background-color: #ad1457;
+}
+
