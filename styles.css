@@ -75,7 +75,7 @@ h1 {
 }
 
 .middle-section {
-    width: 45%; /* Breite der mittleren Sektion */
+    width: 45%;
 }
 
 .entry-inputs input[type="time"],
@@ -182,108 +182,6 @@ button:disabled {
     border-radius: 5px;
 }
 
-/* Styles für Karteikarten */
-.flashcards-section {
-    background-color: #f8bbd0;
-    border-radius: 12px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.flashcard-inputs {
-    margin-bottom: 20px;
-}
-
-.flashcard-inputs label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.flashcard-inputs input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #9c27b0;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.flashcard-inputs button {
-    background-color: #9c27b0;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-right: 10px; /* Abstand zwischen den Buttons */
-}
-
-.flashcard-inputs button:hover {
-    background-color: #c2185b;
-}
-
-.flashcards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flashcard {
-    width: 45%;
-    margin: 10px;
-    padding: 15px;
-    background-color: #352d4b;
-    color: #fff;
-    border-radius: 8px;
-}
-
-.quiz-card {
-    width: 45%;
-    margin: 10px;
-    padding: 15px;
-    background-color: #352d4b;
-    color: #fff;
-    border-radius: 8px;
-}
-
-#quiz {
-    width: 45%;
-    display: none;
-}
-
-#quizCards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#incorrectAnswers {
-    width: 45%;
-    display: none;
-}
-
-#incorrectAnswers h2 {
-    color: #c2185b;
-}
-
-/* Neue Styles für den "Karteikarten löschen"-Button */
-.flashcards-section button {
-    margin-top: 10px;
-    background-color: #ff5722;
-}
-
-/* Anpassungen für den "Quiz starten"-Button */
-.flashcard-inputs button:last-child {
-    background-color: #2196f3;
-    margin-right: 0; /* Kein Abstand zum vorherigen Button */
-}
-
-.flashcard-inputs button:last-child:hover {
-    background-color: #0d47a1;
-}
-
-/* Füge diese Stile am Ende deiner styles.css-Datei hinzu oder aktualisiere die entsprechenden Bereiche */
-
 .flashcards-section {
     width: 45%;
     background-color: #f8bbd0;
@@ -385,4 +283,3 @@ button:disabled {
 #deleteFlashcardsBtn:active {
     background-color: #ad1457;
 }
-
